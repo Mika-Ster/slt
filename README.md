@@ -1,2 +1,2 @@
 # slt
-commit message best practice: <add/update/fix> <message>
+commit message best practice: [add/update/fix] [message]
