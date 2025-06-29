@@ -3,7 +3,7 @@ name: Feature Branch CI
 on:
   push:
     branches:
-      - "feature/*"
+      - "feature/**"
 
 # neuer Linux server wird hier aufgesetzt und nach abschluss gelöscht
 

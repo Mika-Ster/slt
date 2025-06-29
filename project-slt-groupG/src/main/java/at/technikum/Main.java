@@ -8,7 +8,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Tic Tac Toe gestartet!");
-        printBoard(game.getBoard().getGrid());
+        game.getBoard().print();
+
 
         while (true) {
             Player currentPlayer = game.getCurrentPlayer();
@@ -27,7 +28,7 @@ public class Main {
                 continue;
             }
 
-            printBoard(game.getBoard().getGrid());
+            game.getBoard().print();
 
             if (game.getBoard().isFull()) {
                 System.out.println("Das Spiel ist vorbei. Unentschieden!");
@@ -38,17 +39,5 @@ public class Main {
         }
 
         scanner.close();
-    }
-
-    public static void printBoard(char[][] grid) {
-        System.out.println("-------------");
-        for (int i = 0; i < 3; i++) {
-            System.out.print("| ");
-            for (int j = 0; j < 3; j++) {
-                System.out.print(grid[i][j] + " | ");
-            }
-            System.out.println();
-            System.out.println("-------------");
-        }
     }
 }
