@@ -43,6 +43,7 @@ public class Main {
         }
 
         System.out.println("Vielen Dank, bis zum nächsten mal!");
+        System.out.println("Doku wird erstellt...");
 
         scanner.close();
     }
