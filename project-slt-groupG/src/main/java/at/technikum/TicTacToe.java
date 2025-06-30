@@ -18,16 +18,11 @@ public class TicTacToe {
     public boolean playTurn(int row, int col) {
         boolean success = board.place(row, col, currentPlayer.getMarker());
         if (success) {
-            if (hasWinner()) {
-                System.out.println("Spiel beendet! Spieler " + currentPlayer.getMarker() + " hat gewonnen!");
-            } else if (isDraw()) {
-                System.out.println("Unentschieden! Das Spielfeld ist voll.");
-            } else {
+            if(Main.getGameState(this)){
                 switchPlayer();
             }
-        } else {
-            System.out.println("Ungültiger Zug. Bitte ein freies Feld wählen.");
         }
+
         return success;
     }
 
